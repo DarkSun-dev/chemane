@@ -3,7 +3,7 @@ const Search = require('../models/searchActivityModel')
 const fs = require('fs')
 const path = require('path')
 const Temp = require('../models/tempModel')
-const Request = require('../models/RequestModel')
+const Request = require('../models/requestModel')
     exports.createRequest = async (req, res) => {
         console.log(req.body);
 
