@@ -1,44 +1,52 @@
 const mongoose = require('mongoose')
 const analyticsSchema = new mongoose.Schema({
-    IAP_ID: {
+    searchID: {
         type: String,
         required: true,
         description: 'Inventive Activities Plan ID'
     },
-    treineeID: {
+    studentID: {
         type: String,
         required: true,
         description: 'TreineeID'
     },
-    session_identifier: {
-        type: Number,
+    mentorID: {
+        type: String,
         required: true,
         description: 'TreineeID'
     },
-    trainee_weight: {
-        type: Number,
-        required: true,
-        description: 'Peso (Kg)'
+    qualAnalytics: {
+        request_number: {
+            value: Number,
+            description: {
+                type: String,
+                default: 'Número de actividade de busca'
+            }
+        },
+        response_time: {
+            value: Number,
+            description: {
+                type: String,
+                default: 'Tempo de resposta do mentor sobre o pedido de mentoria'
+            }
+        }
     },
-    bpm: {
-        type: Number,
-        required: true,
-        description: 'Media dos batimentos cardíacos'
-    },
-    lost_calories: {
-        type: Number,
-        required: true,
-        description: 'Calorias perdidas'
-    },
-    distance: {
-        type: Number,
-        required: true,
-        description: 'Distancia total percorida na sessão de treino'
-    },
-    training_performance: {
-        type: Number,
-        required: true,
-        description: 'Calorias perdidas'
+    quantAnalytics: {
+        classification: {
+            value: {
+                type: String,
+                enum: ['bad', 'low', 'good', 'verygood', 'excellent'],
+                default: 'good'
+            },
+            description: {
+                type: String,
+                default: 'Classificação da mentoria'
+            }
+        },
+        additional_information: {
+            type: String,
+            description: 'Informação adicional'
+        }
     },
     data: {
         type: String,

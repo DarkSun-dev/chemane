@@ -1,18 +1,7 @@
-module.exports = (app, callback) => {
-    const CONFIG = require('../config/config');
-    //Connect to DB
-    const mongoose = require('mongoose');
-    let settings = {
-        reconnectTries: Number.MAX_VALUE,
-        autoReconnect: true,
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        useFindAndModify: false
-    };
-    global.mongoConnection = mongoose.createConnection(CONFIG.mongodb.uri, settings, (error) => {
-        if (error) throw error;
-        console.log('Database connected successfully!');
-        return callback();
-    })
-
-}
+const mongoose = require('mongoose')
+const mongoUrl = process.env.MONGODB_URL
+mongoose.connect(mongoUrl, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}).then(() => console.log('DB connection successful!'))
+.catch(error => console.log({error}))
