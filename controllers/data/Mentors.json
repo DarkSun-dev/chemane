@@ -24,13 +24,13 @@
         "mentorID": "9580",
         "name": "Mark Snowu",
         "img": "pixB.png",
-        "job_position": "Dirrector do curso",
+        "job_position": "Director do curso",
         "job_title": [
             "Programação",
             "Redes de Computadores"
         ],
         "academic_education": "Engenharia Informatica",
-        "academic_degree": "Licenciatura",
+        "academic_degree": "Mestrado",
         "skills": [
             {
                 "value": "SQL databases"
