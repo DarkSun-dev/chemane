@@ -32,7 +32,7 @@
     "dotenv": "^16.3.1",
     "express": "^4.17.1",
     "express-sanitizer": "^1.0.5",
-    "express-validator": "^6.2.0",
+    "express-validator": "^6.15.0",
     "fs": "0.0.1-security",
     "handlebars": "^4.5.3",
     "jsonwebtoken": "^8.5.1",
