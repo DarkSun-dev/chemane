@@ -34,7 +34,7 @@
     "express-sanitizer": "^1.0.5",
     "express-validator": "^6.2.0",
     "fs": "0.0.1-security",
-    "handlebars": "^4.5.3",
+    "handlebars": "^4.7.8",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.7.12",
     "nodemailer": "^6.3.1"
